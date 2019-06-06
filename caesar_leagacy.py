@@ -36,7 +36,7 @@ def Kore(secret):
     skip = 0
     secreat = secret.lower()
     for char in secret:
-        char.isalpha():                                          #Special characters handelling
+        if char.isalpha():                                          #Special characters handelling
             result.append(char)
             skip = skip + 1
             continue
