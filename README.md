@@ -6,25 +6,25 @@ and Vigenere Cipher.
 The main purpose of the project is to provide simple programable and extendable
 modules to decrypt cypher text without the use of keys or pass phrase
 
-# Features
+## Features
 
-## Caesar Cipher
-    * Normal Encoding Decoding for Alphabets
-    * Extended Encoding Decoding using 96 characterset from ascii from ! to ~
+### Caesar Cipher
+* Normal Encoding Decoding for Alphabets
+* Extended Encoding Decoding using 96 characterset from ascii from ! to ~
       of ASCII characterset that enables it to even decode rot47 chiper
-    * Shows All Possible Combinations
-    * Ability to decode the cypher text and show best guess without any key or password
-    * Ability to annalyse any english like writen language and try to decode string
+* Shows All Possible Combinations
+* Ability to decode the cypher text and show best guess without any key or password
+* Ability to annalyse any english like writen language and try to decode string
       in that language from an example paragraph great for hinglish styled languages
 
-## Vigenere Cipher
-    * Normal Encoding Decoding with the help of the key
+### Vigenere Cipher
+* Normal Encoding Decoding with the help of the key
 
 
-# Usage
+## Usage
    
-## Caesar
- ```
+### Caesar
+```
 usage: caesar.py [-h] [-d DECODE] [-e ENCODE] [-k KEY] [-m METHOD]
 
 optional arguments:
@@ -40,7 +40,7 @@ optional arguments:
                         normal or custom modes default is normal
 ```
 
-## Vigenere
+### Vigenere
 ```
 usage: Vigenere_Chipper.py [-h] [-d DECODE] [-e ENCODE] [-k KEY]
 
@@ -52,29 +52,29 @@ optional arguments:
                         Encode text
   -k KEY, --key KEY     Key to use for encryption or decryption
 ```
-# Limitations in calculating the best guess
+## Limitations in calculating the best guess
     The program has only one limitation that exist in accuracy in guessing
     and showing the suggested output  
     
-    * It depends on size of the string for small pieces of text it may give
+* It depends on size of the string for small pieces of text it may give
       false guesses
 
-    * By default it is Configured for English it may work for other languages
+* By default it is Configured for English it may work for other languages
       too 
- ## Avoiding Limitations 
-    * You are supposed to go through the entire list to see if a better option is
+### Avoiding Limitations 
+* You are supposed to go through the entire list to see if a better option is
     available
 
-    * For any output all possible outputs are shown you can check that
+* For any output all possible outputs are shown you can check that
       or you can use the cypher_scorer to train the algorithm for any othere 
       language
 
 
-# Examples
+## Examples
 
-## Caesar
+### Caesar
 
-### Encoding
+* Encoding
 
     * Normal mode
 ```
@@ -89,7 +89,7 @@ Hapo oaa eb ep skngo
 b{.- -{{ #| #. 1),%-
 ```
 
-### Decoding
+* Decoding
 
     * With key
 
