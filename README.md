@@ -24,7 +24,7 @@ modules to decrypt cypher text without the use of keys or pass phrase
 ## Usage
    
 ### Caesar
-    ```
+```
     usage: caesar.py [-h] [-d DECODE] [-e ENCODE] [-k KEY] [-m METHOD]
 
     optional arguments:
@@ -38,10 +38,10 @@ modules to decrypt cypher text without the use of keys or pass phrase
       -m METHOD, --method METHOD
                             Option to specify encoding/decoding in extended or
                             normal or custom modes default is normal
-    ```
+```
 
 ### Vigenere
-    ```
+```
     usage: Vigenere_Chipper.py [-h] [-d DECODE] [-e ENCODE] [-k KEY]
 
     optional arguments:
@@ -51,7 +51,7 @@ modules to decrypt cypher text without the use of keys or pass phrase
       -e ENCODE, --encode ENCODE
                             Encode text
       -k KEY, --key KEY     Key to use for encryption or decryption
-    ```
+```
 ## Limitations in calculating the best guess
     The program has only one limitation that exist in accuracy in guessing
     and showing the suggested output  
@@ -77,29 +77,29 @@ modules to decrypt cypher text without the use of keys or pass phrase
 * Encoding
 
     * Normal mode
-    ```
+```
     > ./caesar.py -e "Lets see if it works" -k 22
     Hapo oaa eb ep skngo
-    ```
+```
     * Extended mode Encoding
         In this mode characterset used is changed from a-z A-Z to a subset of 
         ASCII characterset  ascii(35) to ascii(126)
 
-            ```
+        ```
             > ./caesar.py -e "Lets see if it works" -k 22 -m extended
             b{.- -{{ #| #. 1),%-
-                ```
+            ```
 * Decoding
 
     * With key
 
-            ```
+        ```
             /caesar.py -d "Hapo oaa eb ep skngo" -k 22
             Lets see if it works
-            ```
+        ```
 
     * Without key
-            ```
+        ```
             ./caesar.py -d "Hapo oaa eb ep skngo"
             Hapo oaa eb ep skngo
             Gzon nzz da do rjmfn
@@ -129,15 +129,15 @@ modules to decrypt cypher text without the use of keys or pass phrase
             Ibqp pbb fc fq tlohp
 
             Best Guess:  Lets see if it works
-            ```
+        ```
 
 ### Vigenere Chipper
 
 * Encoding 
-        ```
+    ```
         > ./Vigenere_Chiper.py -e "Lets see if it works" -k test
         Eill liw by ml phvcl
-        ```
+    ```
 * Decoding 
         '''
         > ./Vigenere_Chiper.py -d "Eill liw by ml phvcl" -k test
