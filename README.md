@@ -22,7 +22,7 @@ modules to decrypt cypher text without the use of keys or pass phrase
 
 
 ## Usage
-   
+
 ### Caesar
 ```
     usage: caesar.py [-h] [-d DECODE] [-e ENCODE] [-k KEY] [-m METHOD]
@@ -53,20 +53,20 @@ modules to decrypt cypher text without the use of keys or pass phrase
       -k KEY, --key KEY     Key to use for encryption or decryption
 ```
 ## Limitations in calculating the best guess
-    The program has only one limitation that exist in accuracy in guessing
-    and showing the suggested output  
-    
+The program has only one limitation that exist in accuracy in guessing
+and showing the suggested output
+
 * It depends on size of the string for small pieces of text it may give
       false guesses
 
 * By default it is Configured for English it may work for other languages
-      too 
-### Avoiding Limitations 
+      too
+### Avoiding Limitations
 * You are supposed to go through the entire list to see if a better option is
     available
 
 * For any output all possible outputs are shown you can check that
-      or you can use the cypher_scorer to train the algorithm for any othere 
+      or you can use the cypher_scorer to train the algorithm for any othere
       language (For training Example have a look at train.py)
 
 
@@ -82,24 +82,24 @@ modules to decrypt cypher text without the use of keys or pass phrase
     Hapo oaa eb ep skngo
 ```
     * Extended mode Encoding
-        In this mode characterset used is changed from a-z A-Z to a subset of 
+        In this mode characterset used is changed from a-z A-Z to a subset of
         ASCII characterset  ascii(35) to ascii(126)
 
-        ```
+```
             > ./caesar.py -e "Lets see if it works" -k 22 -m extended
             b{.- -{{ #| #. 1),%-
-            ```
+```
 * Decoding
 
     * With key
 
-        ```
+```
             /caesar.py -d "Hapo oaa eb ep skngo" -k 22
             Lets see if it works
-        ```
+```
 
     * Without key
-        ```
+```
             ./caesar.py -d "Hapo oaa eb ep skngo"
             Hapo oaa eb ep skngo
             Gzon nzz da do rjmfn
@@ -129,17 +129,30 @@ modules to decrypt cypher text without the use of keys or pass phrase
             Ibqp pbb fc fq tlohp
 
             Best Guess:  Lets see if it works
-        ```
+```
 
 ### Vigenere Chipper
 
-* Encoding 
-    ```
+* Encoding
+```
         > ./Vigenere_Chiper.py -e "Lets see if it works" -k test
         Eill liw by ml phvcl
-    ```
-* Decoding 
-        '''
+```
+* Decoding
+```
         > ./Vigenere_Chiper.py -d "Eill liw by ml phvcl" -k test
         Lets see if it works
-        '''
+```
+
+
+## Authors
+
+* **Utkarsh Yadav**
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Inspiration : In many CTFs competetion caesar chiper is used. It's useful to have an easy to use option
