@@ -87,7 +87,7 @@ and showing the suggested output
 
 ```
             > ./caesar.py -e "Lets see if it works" -k 22 -m extended
-            b{.- -{{ #| #. 1),%-
+            b{,+6+{{6!|6!,6/'*#+
 ```
 * Decoding
 
