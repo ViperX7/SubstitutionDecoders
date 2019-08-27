@@ -26,6 +26,13 @@ def normalize(char):  # Make sure that character stays between 0-25
         char = char + 26
     return char
 
+def extended_normalizer(char):
+    if char <= 32:
+        char = char + 126 - 32
+    elif char > 126:
+        char = char - 126 + 32
+    return char
+
 
 def extended_normalizer1(char):
     if char <= 34:
@@ -76,12 +83,12 @@ def caesar(secret, key, mode, method):
             result.append(chr(char))
     elif method == "extended":
         for char in secret:
-            if char in [" ", "!",'"']:
-                result.append(char)
-                continue
+            # if char in [" ", "!",'"']:          #pseudo code from previous version
+            #     result.append(char)
+            #     continue
             char = ord(char)
             char = caesar_algo(char, key, mode)
-            char = extended_normalizer1(char)
+            char = extended_normalizer(char)
             result.append(chr(char))
     elif method == "extended3":
         for char in secret:
