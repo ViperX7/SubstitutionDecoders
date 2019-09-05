@@ -1,24 +1,24 @@
 # CaesarDecoder
-A simple tool to encode/decode text using Caesar and Vigenere with or without key
+A simple tool to encode/decode text using Caesar and Vigenere cipher.
 
-This tool provides functionality to encrypt or decrypt text using Caesar Cipher
+This tool is ment to encrypt or decrypt text using Caesar Cipher
 and Vigenere Cipher.
 The main purpose of the project is to provide simple programable and extendable
-modules to decrypt cypher text without the use of keys or pass phrase
+modules to decrypt cipher text without the use of keys or pass phrase
 
 ## Features
 
 ### Caesar Cipher
 * Normal Encoding Decoding for Alphabets
 * Extended Encoding Decoding using 96 characterset from ascii from ! to ~
-      of ASCII characterset that enables it to even decode rot47 chiper
+      of ASCII characterset that enables it to even decode rot47 cipher
 * Shows All Possible Combinations
-* Ability to decode the cypher text and show best guess without any key or password
+* Ability to decode the cipher text and show best guess without any key or password
 * Ability to annalyse any english like writen language and try to decode string
       in that language from an example paragraph great for hinglish styled languages
 
 ### Vigenere Cipher
-* Normal Encoding Decoding with the help of the key
+* Normal Encoding Decoding with the help of the key.
 
 
 ## Usage
@@ -42,7 +42,7 @@ modules to decrypt cypher text without the use of keys or pass phrase
 
 ### Vigenere
 ```
-    usage: Vigenere_Chipper.py [-h] [-d DECODE] [-e ENCODE] [-k KEY]
+    usage: Vigenere_Cipher.py [-h] [-d DECODE] [-e ENCODE] [-k KEY]
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -53,20 +53,20 @@ modules to decrypt cypher text without the use of keys or pass phrase
       -k KEY, --key KEY     Key to use for encryption or decryption
 ```
 ## Limitations in calculating the best guess
-The program has only one limitation that exist in accuracy in guessing
-and showing the suggested output
+The suggested output isn't always 100% accurate, It's just a guess.
 
-* It depends on size of the string for small pieces of text it may give
+
+* Accuracy depends on size of the string for small pieces of text it may give
       false guesses
 
-* By default it is Configured for English it may work for other languages
-      too
+* By default it is Configured for English it may or may not work for other languages
+
 ### Avoiding Limitations
 * You are supposed to go through the entire list to see if a better option is
     available
 
 * For any output all possible outputs are shown you can check that
-      or you can use the cypher_scorer to train the algorithm for any othere
+      or you can use the cipher_scorer to train the algorithm for any othere
       language (For training Example have a look at train.py)
 
 
@@ -131,19 +131,48 @@ and showing the suggested output
             Best Guess:  Lets see if it works
 ```
 
-### Vigenere Chipper
+    * Caution
+        When decoding strings with extended mode make sure that the terminal don't
+        replace or miss some characters.
+        To be safe before decoding modify cipher text as follows
+
+                            $    =>   \$
+                            '    =>   \'
+                            "    =>   \"
+                            \    =>   \\ 
+        example:        
+
+        ```
+            If you need to decode:    |$w}Y[i3/IuYJ&u-K{u%'*Iuy~w*wy,{*+5
+
+                Then instead of 
+                    ./caesar.py -d "|$w}Y[i3/IuYJ&u-K{u%'*Iuy~w*wy,{*+5" -m extended
+                
+                You are advised to use
+                    ./caesar.py -d "|\$w}Y[i3/IuYJ&u-K{u%\'*Iuy~w*wy,{*+5" -m extended    
+        ```
+
+
+
+### Vigenere Cipher
 
 * Encoding
 ```
-        > ./Vigenere_Chiper.py -e "Lets see if it works" -k test
+        > ./Vigenere_Cipher.py -e "Lets see if it works" -k test
         Eill liw by ml phvcl
 ```
 * Decoding
 ```
-        > ./Vigenere_Chiper.py -d "Eill liw by ml phvcl" -k test
+        > ./Vigenere_Cipher.py -d "Eill liw by ml phvcl" -k test
         Lets see if it works
 ```
 
+* Decoding without key or flag
+    This feature isn't implemented yet.If you till want to use this tool you will need to bruteforce.
+    I suggest using rockyou word list.
+```
+    // -----ToDo----
+```
 
 ## Authors
 
@@ -155,4 +184,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LIC
 
 ## Acknowledgments
 
-* Inspiration : In many CTFs competetion caesar chiper is used. It's useful to have an easy to use option
+* Inspiration : In many CTFs competetion caesar cipher is used. It's useful to have an easy to use tool that gets the job done.
